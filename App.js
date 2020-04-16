@@ -8,7 +8,6 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { TodayScreen, ReadLaterScreen, PowerSearchScreen, AddContentScreen, LoginScreen } from './src/app/components';
-// import { StatusBar } from './src/app/components/ShareComponent/Statusbar/StatusBar'
 
 const Tab = createBottomTabNavigator();
 

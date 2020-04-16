@@ -3,11 +3,10 @@ import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'nativ
 
 export default function StatusBar() {
     return (
-      <Container>
         <Header>
           <Left>
             <Button transparent>
-              {/* <Icon name='arrow-back' /> */}
+              <Icon name='arrow-back' />
             </Button>
           </Left>
           <Body>
@@ -15,10 +14,9 @@ export default function StatusBar() {
           </Body>
           <Right>
             <Button transparent>
-              {/* <Icon name='menu' /> */}
+              <Icon name='menu' />
             </Button>
           </Right>
         </Header>
-      </Container>
     );
 }
