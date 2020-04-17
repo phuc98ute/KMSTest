@@ -1,7 +1,7 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "open -a Simulator && expo start",
+    "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
@@ -14,6 +14,7 @@
     "@react-navigation/drawer": "^5.4.1",
     "@react-navigation/native": "^5.1.5",
     "@react-navigation/stack": "^5.2.10",
+    "axios": "^0.19.2",
     "expo": "~37.0.3",
     "expo-font": "~8.1.0",
     "native-base": "2.13.8",

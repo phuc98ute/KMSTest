@@ -1,22 +1,27 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
 
-export default function StatusBar() {
+export default function StatusBar(props) {
+  const [data,setData] = useState();
+
+  useEffect(()=>{
+    
+  })
     return (
-        <Header>
-          <Left>
+        <Header style={{backgroundColor:'ffffff'}}>
+          {/* <Left>
             <Button transparent>
               <Icon name='arrow-back' />
             </Button>
-          </Left>
+          </Left> */}
           <Body>
-            <Title>Header</Title>
+        <Title>{props.ScreenName}</Title>
           </Body>
-          <Right>
+          {/* <Right>
             <Button transparent>
               <Icon name='menu' />
             </Button>
-          </Right>
+          </Right> */}
         </Header>
     );
 }

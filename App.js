@@ -33,7 +33,7 @@ function TabsNavigator() {
         },
       })}
       tabBarOptions={{
-        activeTintColor: 'tomato',
+        activeTintColor: 'blue',
         inactiveTintColor: 'gray',
       }}
       >
