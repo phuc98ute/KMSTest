@@ -4,7 +4,7 @@ import { SharedStyle } from '../../styles/SharedStyle';
 import StatusBar from '../ShareComponent/Statusbar/StatusBar';
 import { Content, Header, Item, Input, Left, Body, Right, Button, Icon, Title, Tab, Tabs, TabHeading, List, ListItem, Thumbnail } from 'native-base';
 
-export function PowerSearchScreen() {
+export function PowerSearchScreen(props) {
     return (
         <View style={{ flex: 1 }}>
             <StatusBar ScreenName="Tìm kiếm" />
@@ -15,7 +15,15 @@ export function PowerSearchScreen() {
                         <Input placeholder="Search" />
                         <Icon name="ios-people" />
                     </Item>
-                    <Button transparent>
+                    <Button transparent 
+                    onPress={() => {
+                        /* 1. Navigate to the Details route with params */
+                        props.navigation.navigate('DetailNews', {
+                          itemId: 86,
+                          otherParam: 'anything you want here',
+                        });
+                      }}
+                    >
                         <Text>Search</Text>
                     </Button>
                 </Header>

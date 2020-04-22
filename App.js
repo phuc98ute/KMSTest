@@ -1,16 +1,15 @@
 import * as React from 'react';
 import { View ,Text} from 'react-native';
-import { createAppContainer} from 'react-navigation';
+import { Root } from "native-base";
 import {NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-
+import { createStackNavigator } from '@react-navigation/stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
-import { TodayScreen, ReadLaterScreen, PowerSearchScreen, AddContentScreen, LoginScreen } from './src/app/components';
+import { TodayScreen, ReadLaterScreen, PowerSearchScreen, AddContentScreen, LoginScreen, DetailNewsComponent } from './src/app/components';
 
 const Tab = createBottomTabNavigator();
-
+//use native base 2.13.8 for ios
 function TabsNavigator() {
   return (
       <Tab.Navigator
@@ -45,17 +44,36 @@ function TabsNavigator() {
   );
 }
 
+const Stack = createStackNavigator();
+
+function MyStack() {
+  return (
+    <Stack.Navigator
+    screenOptions={{
+      headerShown: false
+    }}
+    >
+      <Stack.Screen name="Tabs" component={TabsNavigator}/>
+      <Stack.Screen name="DetailNews" component={DetailNewsComponent} />
+    </Stack.Navigator>
+  );
+}
+
 const Drawers = createDrawerNavigator();
 
 function App(){
   return (
     <NavigationContainer>
       <Drawers.Navigator>
-        <Drawers.Screen name="Home" component={TabsNavigator}/>
+        <Drawers.Screen name="Home" component={MyStack}/>
         <Drawers.Screen name="Login" component={LoginScreen}/>
       </Drawers.Navigator>
     </NavigationContainer>
   )
 }
 
-export default App;;
+export default () =>
+  <Root>
+    <App/>
+  </Root>;
+

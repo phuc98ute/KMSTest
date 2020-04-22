@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, ShadowPropTypesIOS } from 'react-native';
 import { SharedStyle } from '../../styles/SharedStyle';
 import StatusBar from '../ShareComponent/Statusbar/StatusBar';
 import { Container, Content, Header, Item, Input, Left, Body, Right, Button, Icon, Title, Tab, Tabs, TabHeading, List, ListItem, Thumbnail, Card, CardItem } from 'native-base';
+
+const logo_url='https://images-na.ssl-images-amazon.com/images/I/318pS6vsuxL._SY355_.png';
 
 export function ReadLaterScreen() {
     return (
@@ -12,25 +14,25 @@ export function ReadLaterScreen() {
                 <Card style={{ flex: 0 }}>
                     <CardItem>
                         <Left>
-                            <Thumbnail source={{ uri: 'Image URL' }} />
+                            <Thumbnail source={{ uri: logo_url }} />
                             <Body>
-                                <Text>NativeBase</Text>
-                                <Text note>April 15, 2016</Text>
+                                <Text>Read Later News</Text>
+                                <Text note>April 22, 2019</Text>
                             </Body>
                         </Left>
                     </CardItem>
                     <CardItem>
                         <Body>
-                            <Image source={{ uri: 'Image URL' }} style={{ height: 200, width: 200, flex: 1 }} />
+                            <Image source={{ uri: 'Image URL' }} style={{ height: 100, width: 100, flex: 1 }} />
                             <Text>
-                            //Your text here
+                            //Your new hear
                             </Text>
                         </Body>
                     </CardItem>
                     <CardItem>
                         <Left>
                             <Button transparent textStyle={{ color: '#87838B' }}>
-                                <Icon name="logo-github" />
+                                <Icon name="ios-person" />
                                 <Text>1,926 stars</Text>
                             </Button>
                         </Left>
